@@ -35,7 +35,6 @@ function App() {
     }
   };
 
-  const [stageText, setStageText] = useState("Process yet to start");
   const [uiUpdate, setUiUpdate] = useState(true);
 
   //sample trial code
@@ -52,7 +51,6 @@ function App() {
         ...cloneStage[eleIndex],
         completed: true,
       };
-      setStageText(cloneStage[eleIndex].text);
       return cloneStage;
     });
   };
@@ -63,7 +61,7 @@ function App() {
     <div className='container'>
       {uiUpdate ? (
         [
-          <ProgressBar color='blue' stages={stage} stageText={stageText} />,
+          <ProgressBar color='blue' stages={stage} />,
           <button
             style={{ width: "5.5rem", margin: "1rem auto" }}
             onClick={startProcess}
