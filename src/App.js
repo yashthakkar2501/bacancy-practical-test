@@ -56,7 +56,7 @@ function App() {
   };
 
   //customizable color and stages
-  //please edit color at line 61 to edit color as per needs
+  //please edit color at line 64 to edit color as per needs
   return (
     <div className='container'>
       {uiUpdate ? (
